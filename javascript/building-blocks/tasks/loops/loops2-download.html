@@ -52,3 +52,22 @@
   </script>
 
 </html>
+
+<!-- 
+  There is a small mistake in your code. In the line where you are setting the text content of the para element, you have used a comma instead of a plus sign to concatenate the strings. Here's the corrected code:
+
+css
+Copy code
+for (let i = 0; i < phonebook.length; i++) {
+  if (name === phonebook[i].name) {
+    para.textContent = `${phonebook[i].name}'s phone is ${phonebook[i].number}`;
+    break;
+  }
+}
+The changes are:
+
+Changed the loop condition to i < phonebook.length, which is the correct way to loop through all elements of an array.
+Used the correct concatenation operator + to combine the strings.
+Added a break statement to exit the loop as soon as a match is found, as per the task requirements.
+With these changes, your code should work correctly.
+-->
